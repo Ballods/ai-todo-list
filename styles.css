@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #131111;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    position: relative; /* Added */
+}
+
+h1 {
+    text-align: center;
+}
+
+.todo-input {
+    display: flex;
+    flex-direction: row; /* Changed to row */
+    margin-bottom: 10px;
+    position: relative; /* Added */
+}
+
+.todo-input input {
+    width: 70%; /* Adjusted to leave space for suggestions */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.todo-input button {
+    width: 30%; /* Adjusted width */
+    padding: 10px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo-input button:hover {
+    background-color: #4cae4c;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#task-list li {
+    padding: 10px;
+    background-color: #eee;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#task-list li.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+#task-list li button {
+    background-color: #d9534f;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#task-list li button:hover {
+    background-color: #c9302c;
+}
+
+.suggestions {
+    position: absolute; /* Changed to absolute positioning */
+    top: 0;
+    left: 100%; /* Positioned to the right of the input field */
+    width: 200px; /* Set a fixed width or adjust as needed */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    max-height: 200px; /* Optional: to handle overflow */
+    overflow-y: auto; /* Optional: to handle overflow */
+}
+
+.suggestions div {
+    padding: 5px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.suggestions div:hover {
+    background-color: #ddd;
+}
